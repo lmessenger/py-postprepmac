@@ -19,31 +19,26 @@ version = "2.0"
 import imp
 import getpass
 import os
+from os.path import expanduser
+import sys
+import time
+import urllib
+import subprocess
+import pip
 
 sudoPass = getpass.getpass("Enter password for sudo usage:")
 
+# function for installing packages
+def install(package):
+    pip.main(['install', package])
+
+# Checks if requests module is installed
 try:
-    imp.find_module("requests")  # Checks if requests module is installed
-    found = True
+    imp.find_module("requests")
+    # found = True
+# if requests module is not found, install it live
 except ImportError:
-    found = False
-if found == False:  # installs requests if not installed
-    import os
-    import sys
-    os.system('clear')
-    raw_input("A Python module needs to be installed. Rerun the script after it installs. \nPress enter to continue...")
-    os.system('echo %s | sudo -S easy_install requests' % sudoPass)
-    os.system('clear')
-    sys.exit("Rerun the script.")
-else:
-    import os
-    import requests
-    import time
-    import urllib
-    import subprocess
-    import sys
-    from os.path import expanduser
-#    from subprocess import Popen      this is no longer used but kept for future reference?
+import requests
 
 
     def download1(url, filename):
@@ -60,6 +55,7 @@ else:
                     print("%i MB out of %i MB downloaded so far..." % (currentsize, filesize), end="\r")
                     f.flush()  # flush writes the stuff in the buffer to the disk
         print("")
+   # from subprocess import Popen      this is no longer used but kept for future reference?
 
 
 def clear():
