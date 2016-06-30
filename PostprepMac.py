@@ -41,6 +41,9 @@ try:
     # found = True
 # if requests module is not found, install it live
 except ImportError:
+    # found = False
+    install('requests')
+
 import requests
 
 
