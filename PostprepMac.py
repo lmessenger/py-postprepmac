@@ -26,7 +26,10 @@ import urllib
 import subprocess
 import pip
 
+
+# ask for root credentials
 sudoPass = getpass.getpass("Enter password for sudo usage:")
+os.system('clear')
 
 # function for installing packages
 def install(package):
