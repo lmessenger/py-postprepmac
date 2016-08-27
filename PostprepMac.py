@@ -16,6 +16,7 @@ version = "2.0"
 # Fixed permissions error when installing requests module on some computers (8/19/2015)
 # Modified Java link/updated timeout (8/17/2015)
 # ----------------------------------------------
+from __future__ import print_function
 import imp
 import getpass
 import os
@@ -25,6 +26,7 @@ import time
 import urllib
 import subprocess
 import pip
+import requests
 
 
 # ask for root credentials
