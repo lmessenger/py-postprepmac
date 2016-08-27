@@ -33,20 +33,7 @@ import requests
 sudoPass = getpass.getpass("Enter password for sudo usage:")
 os.system('clear')
 
-# function for installing packages
-def install(package):
-    pip.main(['install', package])
 
-# Checks if requests module is installed
-try:
-    imp.find_module("requests")
-    # found = True
-# if requests module is not found, install it live
-except ImportError:
-    # found = False
-    install('requests')
-
-import requests
 
 
     def download1(url, filename):
