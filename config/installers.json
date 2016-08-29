@@ -1,6 +1,6 @@
 {
     "installers": [{
-        "full_name": "Mozillla Firefox",
+        "full_name": "Mozilla Firefox",
         "common_name": "Firefox",
         "url": "http://download.mozilla.org/?product=firefox-latest&os=osx&lang=en-US",
         "status": "standard"
