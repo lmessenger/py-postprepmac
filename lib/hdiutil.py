@@ -20,6 +20,9 @@ def diskunmounter(mountpoint, fullname):
 
         # it's a good thing we know the mountpoint
         os.system("hdiutil detach " + mountpoint + " -quiet")
+
+        removedir(mountpoint)
+
         print(fullname + " unmounted.")
     else:
         print(mountpoint + " not found.")
