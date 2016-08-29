@@ -1,6 +1,6 @@
-import sys
 import os
-import shutil
+from fmgr import copy
+
 
 
 def installpkg(path):
@@ -24,23 +24,30 @@ def findpkg(dir):
 def findapp(dir):
 
     # need to check if the directory contains a .app file
-    for fname in os.list(dir):
-        if fname.endswith('.app')
-            return dir + "/" + fname
+    for fname in os.listdir(dir):
+        if fname.endswith('.app'):
+            return fname
 
 
-def installer(dir, *cmd):
+def installer(dir, cmd):
 
     # if there is not .pkg in the directory
     # install from a different method
     if findpkg(dir) == False:
 
+        fname = findapp(dir)
+        sdir = dir + "/" + fname
+
+        print(cmd)
+
         # if no command is designated in the json
-        if cmd == null:
+        if cmd == None:
+
+            ddir = "/Applications/" + fname
 
             # copy the .app to the applications folder
-            shutil.copy(findapp(dir), "/Applications")
-        else
+            copy(sdir, ddir)
+        else:
 
-        # execute the custom command from the json
-            os.system(findapp(dir) + cmd)
+            # execute the custom command from the json
+            os.system(sdir + cmd)
