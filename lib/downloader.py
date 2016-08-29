@@ -23,8 +23,11 @@ def downloader(url, fdir, filename):
             prog = (float(currentsize) / float(filesize)) * 50
 
             # determine how much data has been stored per second (Mbps)
+            # may need to double check math
             prog_time = "{0:.2f}".format(
                 float(currentsize / (time.clock() - start) / 8), 2)
+
+            # write out to console
             sys.stdout.write("\r[%s%s] %s/%sMB (%s Mbps)" % ('=' * int(prog),
                                                              ' ' * int(50 - int(prog)), currentsize, filesize, prog_time))
             sys.stdout.flush()
