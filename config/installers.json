@@ -3,36 +3,43 @@
         "full_name": "Mozilla Firefox",
         "common_name": "Firefox",
         "url": "http://download.mozilla.org/?product=firefox-latest&os=osx&lang=en-US",
-        "status": "standard"
+        "status": "standard",
+        "command": null
     }, {
         "full_name": "Adobe Shockwave",
         "common_name": "Shockwave",
         "url": "http://fpdownload.macromedia.com/get/shockwave/default/english/macosx/latest/Shockwave_Installer_Full_64bit.dmg",
-        "status": "standard"
+        "status": "standard",
+        "command": null
     }, {
         "full_name": "Java for Mac OS X",
         "common_name": "Java",
         "url": "http://javadl.oracle.com/webapps/download/AutoDL?BundleId=207766",
-        "status": "standard"
+        "status": "standard",
+        "command": null
     }, {
         "full_name": "Microsoft Silverlight",
         "common_name": "Silverlight",
         "url": "http://go.microsoft.com/fwlink/?LinkID=229322",
-        "status": "standard"
+        "status": "standard",
+        "command": null
     }, {
         "full_name": "Adobe Flash",
         "common_name": "Flash",
         "url": "http://fpdownload.macromedia.com/pub/flashplayer/latest/help/install_flash_player_osx.dmg",
-        "status": "standard"
+        "status": "standard",
+        "command": "/Contents/MacOS/Adobe\/ Flash\/ Player\/ Install\/ Manager -install"
     }, {
         "full_name": "Adobe Air",
         "common_name": "Air",
         "url": "http://airdownload.adobe.com/air/mac/download/latest/AdobeAIR.dmg",
-        "status": "standard"
+        "status": "standard",
+        "command": "/Contents/MacOS/Adobe\/ Air\/ Installer -silent -eulaAccepted"
     }, {
         "full_name": "Adobe Reader",
         "common_name": "Reader",
         "url": "http://ftp.adobe.com/pub/adobe/reader/mac/11.x/11.0.17/misc/AdbeRdrUpd11017.dmg",
-        "status": "optional"
+        "status": "optional",
+        "command": null
     }]
 }
