@@ -12,25 +12,25 @@ def checkdirexists(dir):
         else:
             # path is not a directory, provide an error
             print("ERROR: " + dir + " already exists and is not a directory.")
-            return True # need to figure out a better returned value
+            return True  # need to figure out a better returned value
     else:
         return False
 
-# make directory
+
 def makedir(dir):
 
     # if the dir doesn't exist, built it
     if checkdirexists(dir) == False:
         os.mkdir(dir)
 
-# remove directory
+
 def removedir(dir):
 
     # if the directory exists, and it is a directory, remove it
     if checkdirexists(dir) == True:
         os.rmdir(dir)
 
-# remove file
+
 def removefile(file):
 
     # remove file
