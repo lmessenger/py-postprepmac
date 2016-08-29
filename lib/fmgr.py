@@ -1,4 +1,6 @@
 import os
+import shutil
+import errno
 
 
 def checkdirexists(dir):
@@ -36,3 +38,17 @@ def removefile(file):
     # remove file
     if os.path.exists(file) == True:
         os.remove(file)
+
+
+def copy(src, dst):
+
+    # let's try to copy the tree
+    # if we get an exception, just copy reguarly
+    try:
+        shutil.rmtree(dst)
+        shutil.copytree(src, dst)
+    except OSError as exc:
+        if exc.errno == errno.ENOTDIR:
+            shutil.copy(src, dst)
+        else:
+            raise
