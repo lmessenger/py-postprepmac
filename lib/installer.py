@@ -3,11 +3,11 @@ import glob
 from fmgr import copy
 
 
-
 def installpkg(path):
 
     # use installer for .pkg files
     # hey, /dev/null isn't great, but it keeps it quiet
+    # and it's better than duct tape
     os.system("sudo installer -pkg " + path + " -target / >> /dev/null")
 
 
@@ -21,7 +21,8 @@ def findpkg(dir):
         installpkg(fname[0])
         return True
 
-    # I'm not sure how frequently this might happen, but might as well write a case for it
+    # I'm not sure how frequently this might happen, but might as well write a
+    # case for it
     elif len(fname) > 1:
         print("ERROR: " + dir +
               " contains more than one installable package. Please install manually:")
@@ -29,7 +30,8 @@ def findpkg(dir):
             print(f)
             return True
 
-    # if you fail and life miserably, and there is no installable package, return False
+    # if you fail and life miserably, and there is no installable package,
+    # return False
     else:
         return False
 
