@@ -16,9 +16,20 @@ def findpkg(dir):
     # need to check if the directory contains a .pkg file
     fname = glob.glob(dir + "/*.pkg")
 
+    # if found only one pkg, then go install it
     if len(fname) == 1:
         installpkg(fname[0])
         return True
+
+    # I'm not sure how frequently this might happen, but might as well write a case for it
+    elif len(fname) > 1:
+        print("ERROR: " + dir +
+              " contains more than one installable package. Please install manually:")
+        for f in fname:
+            print(f)
+            return True
+
+    # if you fail and life miserably, and there is no installable package, return False
     else:
         return False
 
