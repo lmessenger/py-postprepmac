@@ -1,4 +1,5 @@
 import os
+import glob
 from fmgr import copy
 
 
@@ -13,12 +14,13 @@ def installpkg(path):
 def findpkg(dir):
 
     # need to check if the directory contains a .pkg file
-    for fname in os.listdir(dir):
-        if fname.endswith('.pkg'):
-            installpkg(dir + "/" + fname)
-            return True
-        else:
-            return False
+    fname = glob.glob(dir + "/*.pkg")
+
+    if len(fname) == 1:
+        installpkg(fname[0])
+        return True
+    else:
+        return False
 
 
 def findapp(dir):
