@@ -28,13 +28,13 @@
         "common_name": "Flash",
         "url": "http://fpdownload.macromedia.com/pub/flashplayer/latest/help/install_flash_player_osx.dmg",
         "status": "standard",
-        "command": "/Contents/MacOS/Adobe\/ Flash\/ Player\/ Install\/ Manager -install"
+        "command": "/Contents/MacOS/Adobe Flash Player Install Manager -install"
     }, {
         "full_name": "Adobe Air",
         "common_name": "Air",
         "url": "http://airdownload.adobe.com/air/mac/download/latest/AdobeAIR.dmg",
         "status": "standard",
-        "command": "/Contents/MacOS/Adobe\/ Air\/ Installer -silent -eulaAccepted"
+        "command": "/Contents/MacOS/Adobe Air Installer -silent -eulaAccepted"
     }, {
         "full_name": "Adobe Reader",
         "common_name": "Reader",
